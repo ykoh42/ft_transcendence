@@ -2,7 +2,7 @@
 
 ## 목표
 
-1. `Passport-42`를 통해 `OAuth2`를 구현한다.
+1. `Passport-42`를 통해 `OAuth2`를 구현한다.  
    http://www.passportjs.org/packages/passport-42/
 
 ## Routing
@@ -158,4 +158,4 @@ export class FortyTwoOauthController {
 
 ### 동작 확인
 
-`http://localhost:3000/auth/42` 로 접속합니다.
+[`http://localhost:3000/auth/42`](http://localhost:3000/auth/42) 로 접속합니다.

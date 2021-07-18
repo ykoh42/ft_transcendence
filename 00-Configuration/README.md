@@ -88,7 +88,7 @@ export class AppController {
 ### 동작 확인
 
 1. 아래 두가지 커맨드로 각각 서버를 실행해보고,
-2. `http://localhost:3000`로 접속하여,
+2. [`http://localhost:3000`](http://localhost:3000)로 접속하여,
 3. `console.log`를 확인합니다.
 
 ```sh
