@@ -1,8 +1,8 @@
-# OAuth
+# OAuth2
 
 ## 목표
 
-1. `Passport-42`를 통해 `OAuth`를 구현한다.
+1. `Passport-42`를 통해 `OAuth2`를 구현한다.
    http://www.passportjs.org/packages/passport-42/
 
 ## Routing
