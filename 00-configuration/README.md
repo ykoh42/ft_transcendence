@@ -162,4 +162,4 @@ yarn start:dev
 Error: Config validation error: "DB_HOST" is required. "DB_PORT" is required. "DB_PASSWORD" is required. "DB_DATABASE" is required
 ```
 
-`.env`에 `DB_HOST`, `DB_PORT`, `DB_PASSWORD`, `DB_DATABASE` 환경변수를 추가하면 다시 서버를 실행시키면 에러가 사라집니다.
+`.env`에 `DB_HOST`, `DB_PORT`, `DB_PASSWORD`, `DB_DATABASE` 환경변수를 추가하고, 다시 서버를 실행시키면 에러가 사라집니다.
