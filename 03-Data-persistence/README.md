@@ -12,6 +12,8 @@ docker run --name postgres-nest -p 5432:5432 -e POSTGRES_PASSWORD=postgres -d po
 yarn add typeorm @nestjs/typeorm pg
 ```
 
+#### `app.module.ts`
+
 ```ts
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
@@ -41,6 +43,8 @@ nest g mo users
 
 ## Users entity 만들기
 
+#### `user.entity.ts`
+
 ```ts
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
@@ -56,6 +60,8 @@ export class User {
 
 ## Users repository 만들기
 
+#### `users.repository.ts`
+
 ```ts
 import { EntityRepository, Repository } from 'typeorm';
 import { User } from './user.entity';
@@ -63,6 +69,8 @@ import { User } from './user.entity';
 @EntityRepository(User)
 export class UsersRepository extends Repository<User> {}
 ```
+
+#### `users.module.ts`
 
 ```ts
 import { Module } from '@nestjs/common';
@@ -84,11 +92,15 @@ nest g s users
 
 ### POST /users
 
+#### `create-user.dto.ts`
+
 ```ts
 export class CreateUserDto {
   name: string;
 }
 ```
+
+#### `users.controller.ts`
 
 ```ts
 import { Body, Controller, Delete, Get, Patch, Post } from '@nestjs/common';
@@ -109,6 +121,8 @@ export class UsersController {
 }
 ```
 
+#### `users.service.ts`
+
 ```ts
 import { Injectable } from '@nestjs/common';
 import { CreateUserDto } from './dto/create-user.dto';
@@ -124,6 +138,8 @@ export class UsersService {
   }
 }
 ```
+
+#### `users.repository.ts`
 
 ```ts
 import { EntityRepository, Repository } from 'typeorm';
@@ -146,6 +162,8 @@ export class UsersRepository extends Repository<User> {
 ```
 
 ### GET /users
+
+#### `users.controller.ts`
 
 ```ts
 import { Body, Controller, Get, Post } from '@nestjs/common';
@@ -172,6 +190,8 @@ export class UsersController {
 }
 ```
 
+#### `users.service.ts`
+
 ```ts
 import { Injectable } from '@nestjs/common';
 import { CreateUserDto } from './dto/create-user.dto';
@@ -191,6 +211,8 @@ export class UsersService {
   }
 }
 ```
+
+#### `users.repository.ts`
 
 ```ts
 import { EntityRepository, Repository } from 'typeorm';
@@ -218,11 +240,15 @@ export class UsersRepository extends Repository<User> {
 
 ### PATCH /users/:id
 
+#### `update-user.dto.ts`
+
 ```ts
 export class UpdateUserDto {
   name: string;
 }
 ```
+
+#### `users.controller.ts`
 
 ```ts
 import { Body, Controller, Get, Param, Patch, Post } from '@nestjs/common';
@@ -258,6 +284,8 @@ export class UsersController {
 }
 ```
 
+#### `users.service.ts`
+
 ```ts
 import { Injectable } from '@nestjs/common';
 import { CreateUserDto } from './dto/create-user.dto';
@@ -282,6 +310,8 @@ export class UsersService {
   }
 }
 ```
+
+#### `users.repository.ts`
 
 ```ts
 import { EntityRepository, Repository } from 'typeorm';
@@ -317,6 +347,8 @@ export class UsersRepository extends Repository<User> {
 ```
 
 ### DELETE /users/:id
+
+#### `users.controller.ts`
 
 ```ts
 import {
@@ -368,6 +400,8 @@ export class UsersController {
 }
 ```
 
+#### `users.service.ts`
+
 ```ts
 import { Injectable } from '@nestjs/common';
 import { CreateUserDto } from './dto/create-user.dto';
@@ -396,6 +430,8 @@ export class UsersService {
   }
 }
 ```
+
+#### `users.repository.ts`
 
 ```ts
 import { NotFoundException } from '@nestjs/common';
