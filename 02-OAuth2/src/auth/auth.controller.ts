@@ -1,15 +1,15 @@
 import { Controller, Get, Req, UseGuards } from '@nestjs/common';
-import { FortyTwoOauthGuard } from './forty-two-oauth.guard';
+import { FortyTwoOauthGuard } from './auth.guard';
 
-@Controller('auth/42')
+@Controller('auth')
 export class FortyTwoOauthController {
-  @Get()
+  @Get('42')
   @UseGuards(FortyTwoOauthGuard)
   async fortyTwoAuth(): Promise<void> {
     // empty
   }
 
-  @Get('callback')
+  @Get('42/callback')
   @UseGuards(FortyTwoOauthGuard)
   async fortyTwoCallback(
     @Req()

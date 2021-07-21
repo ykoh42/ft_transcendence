@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { configValidationSchema } from './config.schema';
-import { FortyTwoOauthModule } from './forty-two-oauth/forty-two-oauth.module';
+import { FortyTwoOauthModule } from './auth/auth.module';
 
 @Module({
   imports: [

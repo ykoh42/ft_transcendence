@@ -10,6 +10,7 @@ export class FortyTwoOauthStrategy extends PassportStrategy(Strategy, '42') {
       clientID: configService.get<string>('FORTYTWO_APP_ID'),
       clientSecret: configService.get<string>('FORTYTWO_APP_SECRET'),
       callbackURL: 'http://localhost:3000/auth/42/callback',
+      scope: ['public'],
     });
   }
 
